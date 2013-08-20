@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  palabra: MyString
+  significado: MyString
+  idiomaNativo: MyString
+  idiomaForaneo: MyString
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+
+two:
+  palabra: MyString
+  significado: MyString
+  idiomaNativo: MyString
+  idiomaForaneo: MyString
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString

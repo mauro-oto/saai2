@@ -1,0 +1,35 @@
+<h1>Editing list</h1>
+ 
+<%= form_for :list, url: list_path(@list.id), method: :patch do |f| %>
+  <% if @list.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@list.errors.count, "error") %> prohibited
+      this list from being saved:</h2>
+    <ul>
+    <% @list.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <p>
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </p>
+ 
+  <p>
+    <%= f.label :idiomaNativo %><br>
+    <%= f.text_area :idiomaNativo %>
+  </p>
+  
+  <p>
+    <%= f.label :idiomaForaneo %><br>
+    <%= f.text_field :idiomaForaneo %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+ 
+<%= link_to 'Back', lists_path %>

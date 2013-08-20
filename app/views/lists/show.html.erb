@@ -1,0 +1,89 @@
+<p>
+  <strong>Title:</strong>
+  <%= @list.nombre %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @list.idiomaNativo %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @list.idiomaForaneo %>
+</p>
+
+<h2>Filas</h2>
+<% @list.filas.each do |fila| %>
+  <p>
+    <strong>Palabra de la fila:</strong>
+    <%= fila.palabra %>
+  </p>
+  <p>
+    <strong>Significado:</strong>
+    <%= fila.significado %>
+  </p>
+    <p>
+    <strong>Idioma nativo:</strong>
+    <%= fila.idiomaNativo %>
+  </p>
+    <p>
+    <strong>Idioma foraneo:</strong>
+    <%= fila.idiomaForaneo %>
+  </p>
+  <p>
+    <strong>Imagen:</strong>
+    <%= fila.imagen %>
+  </p>
+    <p>
+    <strong>Audio:</strong>
+    <%= fila.audio %>
+  </p>
+  <p>
+    <strong>Sinonimos:</strong>
+    <%= fila.sinonimos %>
+  </p>
+      <p>
+    <strong>Antonimos:</strong>
+    <%= fila.antonimos %>
+  </p>
+<% end %>
+
+<h2>Agregar una fila:</h2>
+<%= form_for([@list, @list.filas.build]) do |f| %>
+  <p>
+    <%= f.label :palabra %><br />
+    <%= f.text_field :palabra %>
+  </p>
+  <p>
+    <%= f.label :significado %><br />
+    <%= f.text_area :significado %>
+  </p>
+  <p>
+    <%= f.label :idiomaNativo %><br />
+    <%= f.text_area :idiomaNativo %>
+  </p>
+  <p>
+    <%= f.label :idiomaForaneo %><br />
+    <%= f.text_area :idiomaForaneo %>
+  </p>
+  <p>
+    <%= f.label :imagen %><br />
+    <%= f.text_area :imagen %>
+  </p>
+  <p>
+    <%= f.label :audio %><br />
+    <%= f.text_area :audio %>
+  </p>
+  <p>
+    <%= f.label :sinonimos %><br />
+    <%= f.text_area :sinonimos %>
+  </p>
+  <p>
+    <%= f.label :antonimos %><br />
+    <%= f.text_area :antonimos %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
