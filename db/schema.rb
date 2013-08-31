@@ -11,13 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130819185323) do
+ActiveRecord::Schema.define(version: 20130831152817) do
 
   create_table "filas", force: true do |t|
     t.string   "palabra"
     t.string   "significado"
-    t.string   "idiomaNativo"
-    t.string   "idiomaForaneo"
     t.string   "imagen"
     t.string   "audio"
     t.string   "sinonimos"
@@ -27,7 +25,7 @@ ActiveRecord::Schema.define(version: 20130819185323) do
     t.integer  "list_id"
   end
 
-  add_index "filas", ["list_id"], name: "index_filas_on_list_id"
+  add_index "filas", ["list_id"], name: "index_filas_on_list_id", using: :btree
 
   create_table "lists", force: true do |t|
     t.string   "nombre"
@@ -38,6 +36,31 @@ ActiveRecord::Schema.define(version: 20130819185323) do
     t.integer  "fila_id"
   end
 
-  add_index "lists", ["fila_id"], name: "index_lists_on_fila_id"
+  add_index "lists", ["fila_id"], name: "index_lists_on_fila_id", using: :btree
+
+  create_table "users", force: true do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "nombre"
+    t.string   "apellido"
+    t.string   "foto"
+    t.string   "idiomasNativos"
+    t.string   "idiomasAAprender"
+    t.integer  "puntosPublicos"
+    t.integer  "puntosPrivados"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

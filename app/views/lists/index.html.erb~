@@ -4,9 +4,8 @@
   <tr>
     <th>Nombre</th>
     <th>IdiomaNativo</th>
-    <th>IdiomaForaneo</th>
-    <th></th>
-    <th></th>
+	<th></th>
+	<th></th>
   </tr>
  
   <% @lists.each do |list| %>

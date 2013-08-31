@@ -52,6 +52,14 @@
     <%= f.text_area :significado %>
   </p>
   <p>
+    <%= f.label :idiomaNativo %><br />
+    <%= f.text_area :idiomaNativo %>
+  </p>
+  <p>
+    <%= f.label :idiomaForaneo %><br />
+    <%= f.text_area :idiomaForaneo %>
+  </p>
+  <p>
     <%= f.label :imagen %><br />
     <%= f.text_area :imagen %>
   </p>
