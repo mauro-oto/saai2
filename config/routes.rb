@@ -6,6 +6,10 @@ Saai2::Application.routes.draw do
     resources :filas
   end
 
+  get 'hangman', to: 'hangman#index', as: 'hangman'
+  get 'hangman/game', to: 'hangman#game', as: 'hangman_game'
+  post 'hangman/game', to: 'hangman#game', as: 'hangman_save'
+
   # Devise
   root :to => "lists#index"
 
@@ -49,7 +53,7 @@ Saai2::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
