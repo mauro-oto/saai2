@@ -9,8 +9,10 @@ end
 def update
 	@fila = Fila.find(params[:id])
 
+  p = { params[:name] => params[:value] }
+
 	respond_to do |format|
-		if @fila.update_attributes(fila_params)
+		if @fila.update_attributes(p)
 			format.html { redirect_to @fila, notice: 'Fila was successfully updated.'}
 			format.json { render json: @fila }
 		else

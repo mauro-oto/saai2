@@ -17,6 +17,7 @@
 //= require_tree .
 
 $(document).ready(function() {
+  $.fn.editable.defaults.ajaxOptions = { type: 'PUT' };
 	$.fn.editable.defaults.mode = 'inline';
 	$('#filas a').editable({
     type: 'text',

@@ -2,7 +2,7 @@
   <strong>Title:</strong>
   <%= @list.nombre %>
 </p>
- 
+
 <p>
   <strong>Text:</strong>
   <%= @list.idiomaNativo %>
@@ -29,12 +29,12 @@
       <tbody>
         <% @list.filas.each do |fila| %>
         <tr>
-          <td><a href="#" id="palabra" data-type="text" data-resource="post" data-name="palabra" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>"><%= fila.palabra %></a></td>
-          <td><a href="#" id="significado" data-type="text" data-resource="post" data-name="significado" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>"><%= fila.significado %></a></td>
-          <td><a href="#" id="imagen" data-type="text" data-resource="post" data-name="imagen" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>"><%= fila.imagen %></a></td>
-          <td><a href="#" id="audio" data-type="text" data-resource="post" data-name="audio" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>"><%= fila.audio %></a></td>
-          <td><a href="#" id="sinonimos" data-type="text" data-resource="post" data-name="sinonimos" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>"><%= fila.sinonimos %></a></td>
-          <td><a href="#" id="antonimos" data-type="text" data-resource="post" data-name="antonimos" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>"><%= fila.antonimos %></a></td>
+          <td><a href="#" id="palabra<%= fila.id %>" data-type="text" data-resource="fila" data-name="palabra" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.palabra %></a></td>
+          <td><a href="#" id="significado<%= fila.id %>" data-type="text" data-resource="fila" data-name="significado" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.significado %></a></td>
+          <td><a href="#" id="imagen<%= fila.id %>" data-type="text" data-resource="fila" data-name="imagen" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.imagen %></a></td>
+          <td><a href="#" id="audio<%= fila.id %>" data-type="text" data-resource="fila" data-name="audio" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.audio %></a></td>
+          <td><a href="#" id="sinonimos<%= fila.id %>" data-type="text" data-resource="fila" data-name="sinonimos" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.sinonimos %></a></td>
+          <td><a href="#" id="antonimos<%= fila.id %>" data-type="text" data-resource="fila" data-name="antonimos" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.antonimos %></a></td>
         </tr>
         <% end %>
       </tbody>
