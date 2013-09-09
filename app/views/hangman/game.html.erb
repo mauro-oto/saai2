@@ -1,0 +1,40 @@
+
+<% if @turns_left > 0 %>
+
+  <% if @word.length > @correct_letters %>
+
+    <img src="/images/hangman_<%= @turns_left %>.png" /><br />
+
+    <h3>Turnos: <%= @turns_left %></h3>
+
+    <%= form_tag hangman_game_path, :method => 'post' do %>
+      <input type="text" name="letter" id="letter" maxlength="1" size="2" style="width: 40px" autocomplete="off" />
+      <input type="submit" value="Enviar" />
+      <a href="/hangman">Nuevo juego</a>
+    <% end %>
+
+  <% else %>
+    <img src="/images/hangman_10.png" /><br />
+    <strong>Ganaste!</strong> <a href="/hangman">Volver a jugar</a>
+  <% end %>
+
+<% else %>
+  <img src="/images/hangman_0.png" /><br />
+  <strong>Perdiste!</strong> La palabra era "<%= UnicodeUtils.upcase(session[:current_word].join("")) %>". <a href="/hangman">Volver a jugar</a>
+<% end %>
+
+<h4>
+  Letras usadas:
+  <% if @used_letters.length > 0 %>
+    <%= @used_letters.split("").join(", ") %>
+  <% else %>
+    Ninguna
+  <% end %>
+</h4>
+
+<div id="hangman">
+  <% @word.each do |letter| %>
+    <span class="letter"><%= letter %></span>
+  <% end %>
+</div>
+

@@ -17,9 +17,17 @@
 //= require_tree .
 
 $(document).ready(function() {
+
+  $.fn.editable.defaults.ajaxOptions = { type: 'PUT' };
 	$.fn.editable.defaults.mode = 'inline';
-	$('#filas a').editable({
+
+  $('#filas a').editable({
     type: 'text',
     name: 'fila'
 	});
+
+  $('#letter').keyup(function() {
+    $(this).val($(this).val().toUpperCase());
+  }).focus();
+
 });

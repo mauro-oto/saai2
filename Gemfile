@@ -51,3 +51,4 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'bootstrap-editable-rails'
+gem 'unicode_utils'
