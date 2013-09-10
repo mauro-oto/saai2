@@ -41,8 +41,9 @@ class HangmanController < ApplicationController
 
   private
     def resetGame
-      dictionary = [ "hier", "kommt", "sonne", "welt", "zählt", "laut", "zehn" ]
-      session[:current_word] = dictionary.sample.split("")
+      #dictionary = [ "hier", "kommt", "sonne", "welt", "zählt", "laut", "zehn" ]
+      #session[:current_word] = dictionary.sample.split("")
+	  session[:current_word] = Fila.random_word.split("")
       session[:used_letters] = ""
       session[:turns_left] = 10
     end

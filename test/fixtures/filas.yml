@@ -1,20 +1,96 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  palabra: MyString
-  significado: MyString
-  idiomaNativo: MyString
-  idiomaForaneo: MyString
+  palabra: Hormiga
+  significado: Ant
   imagen: MyString
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
 
 two:
-  palabra: MyString
-  significado: MyString
-  idiomaNativo: MyString
-  idiomaForaneo: MyString
+  palabra: Murcielago
+  significado: Bat
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+  
+three:
+  palabra: Abeja
+  significado: Bee
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+
+four:
+  palabra: Pajaro
+  significado: Bird
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+
+five:
+  palabra: Mariposa
+  significado: Butterfly
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+
+six:
+  palabra: Camello
+  significado: Camel
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+  
+seven:
+  palabra: Vaca
+  significado: Cow
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+
+eight:
+  palabra: Cangrejo
+  significado: Crab
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+
+nine:
+  palabra: Pato
+  significado: Duck
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+
+ten:
+  palabra: Cabra
+  significado: Goat
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+  
+eleven:
+  palabra: Gorila
+  significado: Gorilla
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+
+twelve:
+  palabra: Cordero
+  significado: Lamb
   imagen: MyString
   audio: MyString
   sinonimos: MyString
