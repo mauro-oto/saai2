@@ -24,8 +24,8 @@ end
 
 def destroy
   @fila = Fila.find(params[:id])
-  @list = List.find(params[:list_id])
   @fila.destroy
+
   redirect_to list_path(@list)
 end
 

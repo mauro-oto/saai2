@@ -9,9 +9,10 @@ Saai2::Application.routes.draw do
   get 'hangman', to: 'hangman#index', as: 'hangman'
   get 'hangman/game', to: 'hangman#game', as: 'hangman_game'
   post 'hangman/game', to: 'hangman#game', as: 'hangman_save'
+  get 'users/menu', to: 'users#menu'
 
   # Devise
-  root :to => "lists#index"
+  root :to => "users#menu"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

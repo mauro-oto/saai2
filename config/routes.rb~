@@ -5,10 +5,11 @@ Saai2::Application.routes.draw do
   resources :lists do
     resources :filas
   end
-  
-  devise_scope :user do
-    get "users/:id" => "users#show"
-  end
+
+  get 'hangman', to: 'hangman#index', as: 'hangman'
+  get 'hangman/game', to: 'hangman#game', as: 'hangman_game'
+  post 'hangman/game', to: 'hangman#game', as: 'hangman_save'
+  get 'users/menu', to: 'users#menu'
 
   # Devise
   root :to => "lists#index"
@@ -53,7 +54,7 @@ Saai2::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

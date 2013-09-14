@@ -4,8 +4,9 @@
   <tr>
     <th>Nombre</th>
     <th>IdiomaNativo</th>
-	<th></th>
-	<th></th>
+    <th>IdiomaForaneo</th>
+    <th></th>
+    <th></th>
   </tr>
  
   <% @lists.each do |list| %>
@@ -15,6 +16,8 @@
       <td><%= list.idiomaForaneo %></td>
       <td><%= link_to 'Show', list_path(list) %></td>
       <td><%= link_to 'Edit', edit_list_path(list) %></td>
+      <td><%= link_to 'Delete', list_path(post), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
     </tr>
   <% end %>
 </table>

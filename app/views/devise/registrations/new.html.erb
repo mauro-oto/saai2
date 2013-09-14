@@ -1,30 +1,39 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    <div class="navbar navbar-fixed-top" id="nav-bar">
+      <div class="navbar-inner">
+        <a class="brand" href="#"> <i class="icon icon-bolt"></i> Sistema de Auto Aprendizaje de Idiomas</a>
+        <ul class="nav pull-right">
+          <li>
+            <a href="#">Si ya estas registrado, clickea aca!</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container" id="hero-container">
+      <h1 class="heading" id="title">Aprende nuevos idiomas</h1>
+      <h2 class="heading" id="subtitle">Juga, arma y comparti tu propio listado de palabras o ejercita con otros participantes</h2>
+    </div>
+    <div class="container">
+      <div class="row-fluid" id="signup-form-container">
+        <span class="span6 offset3">
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:id => "signup-form"}) do |f| %>
   <%= devise_error_messages! %>
-
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
-
-  <div><%= f.label :nombre %><br />
-  <%= f.text_field :nombre %></div>
-
-  <div><%= f.label :apellido %><br />
-  <%= f.text_field :apellido %></div>
-
-  <div><%= f.label :idiomasNativos %><br />
-  <%= f.text_field :idiomasNativos %></div>
-
-  <div><%= f.label :idiomasAAprender %><br />
-  <%= f.text_field :idiomasAAprender %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div><%= f.submit "Sign up" %></div>
+           <%= f.label :email, :class => "sinbreak" %>
+  <%= f.email_field :email, :placeholder => "juan.perez@gmail.com", :autofocus => true %><br />
+           <%= f.label :nombre, :class => "sinbreak" %>
+  <%= f.text_field :nombre, :placeholder => "Juan" %><br />
+<%= f.label :apellido, :class => "sinbreak" %>
+  <%= f.text_field :apellido, :placeholder => "Pérez" %><br />
+<%= f.label :idiomasNativos, :class => "sinbreak" %>
+  <%= f.text_field :idiomasNativos, :placeholder => "Español" %><br />
+<%= f.label :idiomasAAprender, :class => "sinbreak" %>
+  <%= f.text_field :idiomasAAprender, :placeholder => "Inglés" %><br />
+  <%= f.label :password, :class => "sinbreak" %>
+  <%= f.password_field :password, :placeholder => "********" %><br />
+  <%= f.label :password_confirmation, :class => "sinbreak" %>
+  <%= f.password_field :password_confirmation, :placeholder => "********" %><br />
+<%= f.submit "Sign up", :class => "btn btn-primary"%></div>
 <% end %>
-
-<%= render "devise/shared/links" %>
+        </span>
+      </div>
+    </div>
+<%= render "devise/shared/links" %>  

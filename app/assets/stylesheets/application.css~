@@ -12,7 +12,6 @@
  *= require_tree .
  */
 
-/*
 .sinbreak{
   width: 2em;
   float: left;
@@ -20,4 +19,3 @@
   margin-right: 0.5em;
   display: block
 }
-*/

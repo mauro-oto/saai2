@@ -21,7 +21,7 @@ $(document).ready(function() {
   $.fn.editable.defaults.ajaxOptions = { type: 'PUT' };
 	$.fn.editable.defaults.mode = 'inline';
 
-  $('.editable1').editable({
+  $('#filas a').editable({
     type: 'text',
     name: 'fila'
 	});

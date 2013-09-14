@@ -24,17 +24,19 @@
           <th>Audio</th>
           <th>Sinonimos</th>
           <th>Antonimos</th>
+	  <th />
         </tr>
       </thead>
       <tbody>
         <% @list.filas.each do |fila| %>
         <tr>
-          <td><a href="#" id="palabra<%= fila.id %>" data-type="text" data-resource="fila" data-name="palabra" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.palabra %></a></td>
-          <td><a href="#" id="significado<%= fila.id %>" data-type="text" data-resource="fila" data-name="significado" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.significado %></a></td>
-          <td><a href="#" id="imagen<%= fila.id %>" data-type="text" data-resource="fila" data-name="imagen" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.imagen %></a></td>
-          <td><a href="#" id="audio<%= fila.id %>" data-type="text" data-resource="fila" data-name="audio" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.audio %></a></td>
-          <td><a href="#" id="sinonimos<%= fila.id %>" data-type="text" data-resource="fila" data-name="sinonimos" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.sinonimos %></a></td>
-          <td><a href="#" id="antonimos<%= fila.id %>" data-type="text" data-resource="fila" data-name="antonimos" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.antonimos %></a></td>
+          <td><a href="#" class="editable1" id="palabra<%= fila.id %>" data-type="text" data-resource="fila" data-name="palabra" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.palabra %></a></td>
+          <td><a href="#" class="editable1" id="significado<%= fila.id %>" data-type="text" data-resource="fila" data-name="significado" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.significado %></a></td>
+          <td><a href="#" class="editable1" id="imagen<%= fila.id %>" data-type="text" data-resource="fila" data-name="imagen" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.imagen %></a></td>
+          <td><a href="#" class="editable1" id="audio<%= fila.id %>" data-type="text" data-resource="fila" data-name="audio" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.audio %></a></td>
+          <td><a href="#" class="editable1" id="sinonimos<%= fila.id %>" data-type="text" data-resource="fila" data-name="sinonimos" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.sinonimos %></a></td>
+          <td><a href="#" class="editable1" id="antonimos<%= fila.id %>" data-type="text" data-resource="fila" data-name="antonimos" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.antonimos %></a></td>
+	  <td><%= link_to 'Delete', [fila.list, fila], method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
         <% end %>
       </tbody>

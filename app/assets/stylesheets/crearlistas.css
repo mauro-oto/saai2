@@ -1,0 +1,143 @@
+html {
+  background-color: #efede8;
+}
+body {
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent;
+}
+#page-wrapper {
+  position: relative;
+  width: 1010px;
+  /* centers the document */
+  margin: 0 auto;
+  /*
+  hides anything drawn off canvas.
+  remove overflow and height to see things drawn off canvas.
+  */
+  overflow: hidden;
+  height: 800px;
+}
+/* This makes absolutely positioned elements like p, h1,
+     and some bootstrap elements placed properly. */
+ #absolute-wrapper p, #absolute-wrapper h1, #absolute-wrapper h2, #absolute-wrapper h3, #absolute-wrapper h4, #absolute-wrapper h5, #absolute-wrapper h6 {
+  margin-top: 0 !important;
+}
+#absolute-wrapper {
+  position: relative;
+  width: 1010px;
+  margin: 0 auto;
+  height: 1px;
+}
+#absolute-wrapper .rectangle.rectangle-1 {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+#absolute-wrapper .rectangle.rectangle-2 {
+  border-radius: 0px 0px 2px 2px;
+}
+#absolute-wrapper .rectangle {
+  border: none;
+  position: absolute;
+}
+#absolute-wrapper .rectangle.rectangle-3 {
+  background: rgba(255, 255, 255, 0.729412);
+  width: 1059px;
+  height: 65px;
+  top: -5px;
+  left: 0px;
+}
+#absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-3 .heading {
+  font-family:"oswald";
+  font-weight: normal;
+  font-size: 17pt;
+  width: 400px;
+  height: 42px;
+  position: absolute;
+  top: 17px;
+  left: 129px;
+}
+#absolute-wrapper .rectangle.rectangle-2.rectangle-4 {
+  background: #ffffff;
+  -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.14902);
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.14902);
+  -o-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.14902);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.14902);
+  width: 60px;
+  height: 68px;
+  top: -2px;
+  left: 55px;
+}
+#absolute-wrapper .rectangle.rectangle-2.rectangle-4 .image {
+  border-radius: 0px;
+  opacity: 0.8999999761581421;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  width: 30px;
+  height: 40px;
+  position: absolute;
+  top: 14px;
+  left: 15px;
+}
+#absolute-wrapper .rectangle.rectangle-1.rectangle-5 {
+  background: #68bea7;
+  border-radius: 0px;
+  width: 1114px;
+  height: 380px;
+  top: 153px;
+  left: -49px;
+}
+#absolute-wrapper .rectangle.rectangle-1.rectangle-5 .heading {
+  font-family:"helvetica neue";
+  font-size: 35px;
+  width: 361px;
+  height: 42px;
+  position: absolute;
+  top: 25px;
+  left: 110px;
+}
+#absolute-wrapper form {
+  width: 424px;
+  height: 320px;
+  position: absolute;
+  top: 231px;
+  left: 63px;
+}
+#absolute-wrapper form .control-label {
+  font-weight: bold;
+}
+#absolute-wrapper form .control-label.control-label-1 {
+  margin: 0px;
+}
+#absolute-wrapper form p {
+  font-size: 10px;
+  margin: 0px;
+}
+#absolute-wrapper form select {
+  width: 200px;
+}
+#absolute-wrapper form .form-actions {
+  background: transparent;
+  border: none;
+  margin: -5px 0px 20px -20px;
+  width: 90px;
+}
+#absolute-wrapper form .btn-primary {
+  background: rgba(255, 111, 0, 0.831373);
+  background-image: -moz-linear-gradient(270deg, rgba(255, 111, 0, 0.831373) 0%, #ff856f 100%);
+  background-image: -webkit-linear-gradient(270deg, rgba(255, 111, 0, 0.831373) 0%, #ff856f 100%);
+  background-image: -o-linear-gradient(270deg, rgba(255, 111, 0, 0.831373) 0%, #ff856f 100%);
+  background-image: linear-gradient(180deg, rgba(255, 111, 0, 0.831373) 0%, #ff856f 100%);
+  border-radius: 8px;
+}
+#absolute-wrapper .row-fluid {
+  width: 1050px;
+  height: 501px;
+  position: absolute;
+  top: 805px;
+  left: 0px;
+}

@@ -1,0 +1,172 @@
+html {
+  background-color: #efede8;
+}
+body {
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent;
+}
+#page-wrapper {
+  position: relative;
+  width: 1010px;
+  /* centers the document */
+  margin: 0 auto;
+  /*
+  hides anything drawn off canvas.
+  remove overflow and height to see things drawn off canvas.
+  */
+  overflow: hidden;
+  height: 800px;
+}
+/* This makes absolutely positioned elements like p, h1,
+     and some bootstrap elements placed properly. */
+ #absolute-wrapper p, #absolute-wrapper h1, #absolute-wrapper h2, #absolute-wrapper h3, #absolute-wrapper h4, #absolute-wrapper h5, #absolute-wrapper h6 {
+  margin-top: 0 !important;
+}
+#absolute-wrapper {
+  position: relative;
+  width: 1010px;
+  margin: 0 auto;
+  height: 1px;
+}
+#absolute-wrapper .rectangle.rectangle-1 {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+#absolute-wrapper .rectangle.rectangle-2 {
+  border-radius: 0px 0px 2px 2px;
+}
+#absolute-wrapper .rectangle {
+  border: none;
+  position: absolute;
+}
+#absolute-wrapper .rectangle.rectangle-3 {
+  background: rgba(255, 255, 255, 0.729412);
+  width: 1059px;
+  height: 65px;
+  top: -5px;
+  left: 0px;
+}
+#absolute-wrapper .rectangle.rectangle-1.rectangle-2.rectangle-3 .heading {
+  font-family:"oswald";
+  font-weight: normal;
+  font-size: 17pt;
+  width: 400px;
+  height: 42px;
+  position: absolute;
+  top: 17px;
+  left: 129px;
+}
+#absolute-wrapper .rectangle.rectangle-2.rectangle-4 {
+  background: #ffffff;
+  -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.14902);
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.14902);
+  -o-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.14902);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.14902);
+  width: 60px;
+  height: 68px;
+  top: -2px;
+  left: 55px;
+}
+#absolute-wrapper .rectangle.rectangle-2.rectangle-4 .image {
+  border-radius: 0px;
+  opacity: 0.8999999761581421;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  width: 30px;
+  height: 40px;
+  position: absolute;
+  top: 14px;
+  left: 15px;
+}
+#absolute-wrapper .table.table-striped.table-bordered {
+  position: absolute;
+}
+#absolute-wrapper .table.table-striped.table-bordered.table-bordered-1 {
+  width: 241px;
+}
+#absolute-wrapper .table.table-striped.table-bordered.table-bordered-2 {
+  height: 184px;
+}
+#absolute-wrapper .table.table-striped.table-bordered.table-bordered-3 {
+  width: 394px;
+  height: 77px;
+  top: 113px;
+  left: 265px;
+}
+#absolute-wrapper .table.table-striped.table-bordered.table-bordered-3 thead tr th {
+  font-family:"helvetica neue";
+  font-size: 20px;
+  text-decoration: underline;
+  text-align: center;
+  background: #68bea7;
+}
+#absolute-wrapper .table.table-striped.table-bordered.table-bordered-3 thead tr th.th-1 {
+  height: 28px;
+  width: 179px;
+}
+#absolute-wrapper .table.table-striped.table-bordered.table-bordered-3 tbody tr td {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+#absolute-wrapper .rectangle.rectangle-1.rectangle-5 {
+  background: #68bea7;
+  border-radius: 0px;
+  width: 1114px;
+  height: 403px;
+  top: 231px;
+  left: -54px;
+}
+#absolute-wrapper .rectangle.rectangle-1.rectangle-5 .heading {
+  height: 42px;
+  position: absolute;
+}
+#absolute-wrapper .rectangle.rectangle-1.rectangle-5 .heading.heading-1 {
+  font-family:"helvetica neue";
+  font-size: 35px;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.498039);
+  width: 152px;
+  top: 8px;
+  left: 458px;
+}
+#absolute-wrapper .rectangle.rectangle-1.rectangle-5 .heading.heading-2 {
+  text-align: center;
+  width: 131px;
+  top: 64px;
+  left: 467px;
+}
+#absolute-wrapper .rectangle.rectangle-1.rectangle-5 .heading.heading-3 {
+  width: 176px;
+  top: 69px;
+  left: 768px;
+}
+#absolute-wrapper .rectangle.rectangle-1.rectangle-5 .heading.heading-4 {
+  width: 138px;
+  top: 74px;
+  left: 141px;
+}
+#absolute-wrapper .rectangle.rectangle-1.rectangle-5 .table.table-striped.table-bordered.table-bordered-1.table-bordered-2.table-bordered-4 {
+  top: 118px;
+  left: 409px;
+}
+#absolute-wrapper .rectangle.rectangle-1.rectangle-5 .table.table-striped.table-bordered.table-bordered-2.table-bordered-5 {
+  width: 222px;
+  top: 120px;
+  left: 101px;
+}
+#absolute-wrapper .rectangle.rectangle-1.rectangle-5 .table.table-striped.table-bordered.table-bordered-1.table-bordered-2.table-bordered-6 {
+  top: 121px;
+  left: 730px;
+}
+#absolute-wrapper .row-fluid {
+  width: 1050px;
+  height: 501px;
+  position: absolute;
+  top: 805px;
+  left: 0px;
+}
