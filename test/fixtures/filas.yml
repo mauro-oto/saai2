@@ -7,6 +7,7 @@ one:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
+  list_id: one
 
 two:
   palabra: Murcielago
@@ -15,7 +16,8 @@ two:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
-  
+  list_id: one
+
 three:
   palabra: Abeja
   significado: Bee
@@ -23,6 +25,7 @@ three:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
+  list_id: one
 
 four:
   palabra: Pajaro
@@ -31,6 +34,7 @@ four:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
+  list_id: one
 
 five:
   palabra: Mariposa
@@ -39,6 +43,7 @@ five:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
+  list_id: one
 
 six:
   palabra: Camello
@@ -47,7 +52,8 @@ six:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
-  
+  list_id: one
+
 seven:
   palabra: Vaca
   significado: Cow
@@ -55,6 +61,7 @@ seven:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
+  list_id: one
 
 eight:
   palabra: Cangrejo
@@ -63,6 +70,7 @@ eight:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
+  list_id: one
 
 nine:
   palabra: Pato
@@ -71,6 +79,7 @@ nine:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
+  list_id: one
 
 ten:
   palabra: Cabra
@@ -79,7 +88,8 @@ ten:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
-  
+  list_id: one
+
 eleven:
   palabra: Gorila
   significado: Gorilla
@@ -87,6 +97,7 @@ eleven:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
+  list_id: one
 
 twelve:
   palabra: Cordero
@@ -95,3 +106,4 @@ twelve:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
+  list_id: one

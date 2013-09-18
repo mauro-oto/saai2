@@ -1,21 +1,21 @@
 <p>
-  <strong>Title:</strong>
-  <%= @list.nombre %>
+  <h3>Nombre de lista:</h3>
+  <h4><%= @list.nombre %></h4>
 </p>
 
 <p>
-  <strong>Text:</strong>
-  <%= @list.idiomaNativo %>
+  <h3>Idioma Nativo:</h3>
+  <h4><%= @list.idiomaNativo %></h4>
 </p>
 
 <p>
-  <strong>Text:</strong>
-  <%= @list.idiomaForaneo %>
+  <h3>Idioma Foraneo:</h3>
+  <h4><%= @list.idiomaForaneo %></h4>
 </p>
 
 <h2>Filas:</h2>
-  <p>
-    <table id="filas" class="table table-striped table-bordered table-hover table-condensed">
+  <p><center>
+    <table id="filas" class="table table-striped table-condensed table-hover">
       <thead>
         <tr>
           <th>Palabra</th>
@@ -40,36 +40,42 @@
         </tr>
         <% end %>
       </tbody>
-    </table>
+    </table></center>
   </p>
 
 <h2>Agregar una fila:</h2>
 <%= form_for([@list, @list.filas.build]) do |f| %>
   <p>
+  <center><table id="filas2">
+  <tr>
+  <td>
     <%= f.label :palabra %><br />
     <%= f.text_field :palabra %>
-  </p>
-  <p>
+  </td>
+  <td>
     <%= f.label :significado %><br />
-    <%= f.text_area :significado %>
-  </p>
-  <p>
+    <%= f.text_field :significado %>
+  </td>
+  <td>
     <%= f.label :imagen %><br />
-    <%= f.text_area :imagen %>
-  </p>
-  <p>
+    <%= f.text_field :imagen %>
+  </td>
+  </tr>
+  <tr>
+  <td>
     <%= f.label :audio %><br />
-    <%= f.text_area :audio %>
-  </p>
-  <p>
+    <%= f.text_field :audio %>
+  </td>
+  <td>
     <%= f.label :sinonimos %><br />
-    <%= f.text_area :sinonimos %>
-  </p>
-  <p>
+    <%= f.text_field :sinonimos %>
+  </td>
+  <td>
     <%= f.label :antonimos %><br />
-    <%= f.text_area :antonimos %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
+    <%= f.text_field :antonimos %>
+  </td>
+  </tr>
+  </table>
+  <%= f.submit %>
+  </center>
 <% end %>

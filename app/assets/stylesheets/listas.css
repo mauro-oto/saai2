@@ -159,3 +159,35 @@ body {
   top: 805px;
   left: 0px;
 }
+#filas {
+  border-radius: 3px;
+  -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.701961), 0px 1px 2px 0px rgba(0, 0, 0, 0.270588);
+  -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.701961), 0px 1px 2px 0px rgba(0, 0, 0, 0.270588);
+  -o-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.701961), 0px 1px 2px 0px rgba(0, 0, 0, 0.270588);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.701961), 0px 1px 2px 0px rgba(0, 0, 0, 0.270588);
+  background: rgba(255, 255, 255, 0.227451);
+  background-image: -moz-linear-gradient(270deg, rgba(255, 255, 255, 0.227451) 0%, rgba(191, 191, 191, 0.329412) 100%);
+  background-image: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 0.227451) 0%, rgba(191, 191, 191, 0.329412) 100%);
+  background-image: -o-linear-gradient(270deg, rgba(255, 255, 255, 0.227451) 0%, rgba(191, 191, 191, 0.329412) 100%);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.227451) 0%, rgba(191, 191, 191, 0.329412) 100%);
+  height: 500px;
+  width: 740px;
+}
+#crearfila {
+  width:500px;
+  height:250px;
+}
+#filas2 {
+  border-radius: 20px;
+  -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.701961), 0px 1px 2px 0px rgba(0, 0, 0, 0.270588);
+  -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.701961), 0px 1px 2px 0px rgba(0, 0, 0, 0.270588);
+  -o-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.701961), 0px 1px 2px 0px rgba(0, 0, 0, 0.270588);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.701961), 0px 1px 2px 0px rgba(0, 0, 0, 0.270588);
+  background: rgba(255, 255, 255, 0.227451);
+  background-image: -moz-linear-gradient(270deg, rgba(255, 255, 255, 0.227451) 0%, rgba(191, 191, 191, 0.329412) 100%);
+  background-image: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 0.227451) 0%, rgba(191, 191, 191, 0.329412) 100%);
+  background-image: -o-linear-gradient(270deg, rgba(255, 255, 255, 0.227451) 0%, rgba(191, 191, 191, 0.329412) 100%);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.227451) 0%, rgba(191, 191, 191, 0.329412) 100%);
+  height: 200px;
+  width: 780px;
+}

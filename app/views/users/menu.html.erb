@@ -7,15 +7,15 @@
           <img src="images/black_invert_30x40.png" class="image">
         </div>
         <div class="dom-body-text paragraph">
-          <p>Bienvenido al SAAI, Juan Pérez!</p>
+          <p>Bienvenido al SAAI, <%= current_user.nombre %>!</p>
         </div>
         <div class="rectangle rectangle-1 rectangle-5">
           <h3 class="heading">Que te gustaría hacer?&nbsp;</h3>
           <div class="btn-group">
-            <a href="juegos.html"><button class="btn btn-primary">Jugar</button></a>
-            <a href="listas.html"><button class="btn btn-warning">Listas de Vocabulario</button></a>
+            <a href="/hangman"><button class="btn btn-primary">Jugar</button></a>
+            <a href="/lists"><button class="btn btn-warning">Listas de Vocabulario</button></a>
             <button class="btn btn-danger">Realizar actividades</button>
-            <button class="btn btn-info">Participar de un Hangout</button>
+            <%= link_to "Ver Perfil", user_path(current_user), :class => 'btn btn-info' %>
             <a href="rankings.html"><button class="btn btn-success">Ver Rankings</button></a>
           </div>
         </div>
@@ -29,7 +29,7 @@
           <tbody>
             <tr>
               <td>150</td>
-              <td>25</td>
+              <td><%= current_user.puntosPrivados %></td>
             </tr>
           </tbody>
         </table>
