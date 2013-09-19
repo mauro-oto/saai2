@@ -1,6 +1,22 @@
-<h2>Sign in</h2>
-
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+<div class="navbar navbar-fixed-top" id="nav-bar">
+  <div class="navbar-inner">
+    <a class="brand" href="#"> <i class="icon icon-bolt"></i> Sistema de Auto Aprendizaje de Idiomas</a>
+    <ul class="nav pull-right">
+      <li>
+        <a href="/users/sign_in">Si ya estas registrado, clickea aca!</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="container" id="hero-container">
+  <h1 class="heading" id="title">Aprende nuevos idiomas</h1>
+  <h2 class="heading" id="subtitle">Juga, arma y comparti tu propio listado de palabras o ejercita con otros participantes</h2>
+</div>
+<div class="container">
+  <div class="row-fluid" id="signup-form-container">
+    <span class="span6 offset3">
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:id => "signup-form2"}) do |f| %>
+<h2> Sign in:</h2>
   <div><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
 
@@ -10,8 +26,13 @@
   <% if devise_mapping.rememberable? -%>
     <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
   <% end -%>
-
-  <div><%= f.submit "Sign in" %></div>
+  <div><%= f.submit "Sign in", :class => "btn btn-primary" %></div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+  </div>
+    </span>
+  </div>
+</div>
+
+<center><%= render "devise/shared/links" %>  </center>
+

@@ -32,7 +32,7 @@ class HangmanController < ApplicationController
       if UnicodeUtils.upcase(@used_letters).include?(UnicodeUtils.upcase(letter))
         @word.push(UnicodeUtils.upcase(letter))
         @correct_letters += 1
-        if @correct_letters == @word.length
+        if @correct_letters == session[:current_word].length
           current_user.puntosPrivados = current_user.puntosPrivados + 10
           current_user.save
         end
@@ -47,7 +47,7 @@ class HangmanController < ApplicationController
     def resetGame
       #dictionary = [ "hier", "kommt", "sonne", "welt", "zählt", "laut", "zehn" ]
       #session[:current_word] = dictionary.sample.split("")
-	  session[:current_word] = Fila.random_word.split("")
+	    session[:current_word] = Fila.random_word.split("")
       session[:used_letters] = ""
       session[:turns_left] = 10
     end

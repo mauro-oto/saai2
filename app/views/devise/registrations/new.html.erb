@@ -17,23 +17,23 @@
         <span class="span6 offset3">
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:id => "signup-form"}) do |f| %>
   <%= devise_error_messages! %>
-           <%= f.label :email, :class => "sinbreak" %>
+           <%= f.label :email, "E-mail", :class => "sinbreak" %>
   <%= f.email_field :email, :placeholder => "juan.perez@gmail.com", :autofocus => true %><br />
            <%= f.label :nombre, :class => "sinbreak" %>
   <%= f.text_field :nombre, :placeholder => "Juan" %><br />
 <%= f.label :apellido, :class => "sinbreak" %>
   <%= f.text_field :apellido, :placeholder => "Pérez" %><br />
-<%= f.label :idiomasNativos, :class => "sinbreak" %>
+<%= f.label :idiomasNativos, "Idioma Nativo" , :class => "sinbreak" %>
   <%= f.text_field :idiomasNativos, :placeholder => "Español" %><br />
-<%= f.label :idiomasAAprender, :class => "sinbreak" %>
+<%= f.label :idiomasAAprender, "Idioma a Aprender", :class => "sinbreak" %>
   <%= f.text_field :idiomasAAprender, :placeholder => "Inglés" %><br />
   <%= f.label :password, :class => "sinbreak" %>
   <%= f.password_field :password, :placeholder => "********" %><br />
   <%= f.label :password_confirmation, :class => "sinbreak" %>
   <%= f.password_field :password_confirmation, :placeholder => "********" %><br />
-<%= f.submit "Sign up", :class => "btn btn-primary"%></div>
+<%= f.submit "Sign up", :class => "btn btn-primary" %></div>
 <% end %>
         </span>
       </div>
     </div>
-<%= render "devise/shared/links" %>  
+<center><%= render "devise/shared/links" %>  </center>

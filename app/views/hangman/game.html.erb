@@ -3,7 +3,7 @@
 
   <% if @word.length > @correct_letters %>
 
-    <img src="/images/hangman_<%= @turns_left %>.png" /><br />
+    <img src="/images/hangman_0<%= @turns_left %>.png" /><br />
 
     <h3>Turnos: <%= @turns_left %></h3>
 
@@ -14,13 +14,13 @@
     <% end %>
 
   <% else %>
-    <img src="/images/hangman_10.png" /><br />
-    <strong>Ganaste!</strong> <a href="/hangman">Volver a jugar</a>
+    <img src="/images/hangman_010.png" /><br />
+    <h3>Ganaste! Se te acreditaron 10 puntos. </h3> <a href="/hangman">Volver a jugar</a>
   <% end %>
 
 <% else %>
-  <img src="/images/hangman_0.png" /><br />
-  <strong>Perdiste!</strong> La palabra era "<%= UnicodeUtils.upcase(session[:current_word].join("")) %>". <a href="/hangman">Volver a jugar</a>
+  <img src="/images/hangman_00.png" /><br />
+  <h3>Perdiste!</h3> La palabra era "<%= UnicodeUtils.upcase(session[:current_word].join("")) %>". <a href="/hangman">Volver a jugar</a>
 <% end %>
 
 <h4>
