@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130914174842) do
+ActiveRecord::Schema.define(version: 20130921185206) do
 
   create_table "filas", force: true do |t|
     t.string   "palabra"
@@ -34,13 +34,11 @@ ActiveRecord::Schema.define(version: 20130914174842) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "fila_id"
-    t.integer  "users_id"
     t.integer  "user_id"
   end
 
   add_index "lists", ["fila_id"], name: "index_lists_on_fila_id", using: :btree
   add_index "lists", ["user_id"], name: "index_lists_on_user_id", using: :btree
-  add_index "lists", ["users_id"], name: "index_lists_on_users_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -60,8 +58,8 @@ ActiveRecord::Schema.define(version: 20130914174842) do
     t.string   "foto"
     t.string   "idiomasNativos"
     t.string   "idiomasAAprender"
-    t.integer  "puntosPublicos"
-    t.integer  "puntosPrivados"
+    t.integer  "puntosPublicos",         default: 0
+    t.integer  "puntosPrivados",         default: 0
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
