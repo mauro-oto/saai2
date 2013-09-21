@@ -30,4 +30,9 @@ $(document).ready(function() {
     $(this).val($(this).val().toUpperCase());
   }).focus();
 
+  $('#adivinar').click(function() {
+  	$('#palabra').toggle("slow", function() {});
+  	$('#palabra').focus();
+  });
+
 });
