@@ -10,6 +10,8 @@ Saai2::Application.routes.draw do
   get 'hangman/game', to: 'hangman#game', as: 'hangman_game'
   post 'hangman/game', to: 'hangman#game', as: 'hangman_save'
   get 'users/menu', to: 'users#menu'
+  get 'ranking', to: 'users#ranking'
+  get "actividades/", to: 'actividades#index'
 
   # Devise
   root :to => "users#menu"
