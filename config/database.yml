@@ -24,7 +24,7 @@ test:
   database: mysql_test
   pool: 5
   username: root
-  password: Arvato123!
+  password: root
   host: localhost
   port: 3306
 
