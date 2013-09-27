@@ -1,15 +1,19 @@
-<h1>Mostrando listas</h1>
+<h1>Mostrando listas de <%= current_user.nombre %>: </h1>
+<br />
  
-<table class="table">
+<center>
+<table id="listas" class="table table-striped table-condensed table-hover">
+<thead>
   <tr>
     <th>Nombre</th>
-    <th>IdiomaNativo</th>
-    <th>IdiomaForaneo</th>
+    <th>Idioma Nativo</th>
+    <th>Idioma Foraneo</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
- 
+ </thead>
+ <tbody>
   <% @lists.each do |list| %>
     <tr>
       <td><%= list.nombre %></td>
@@ -21,7 +25,9 @@
 
     </tr>
   <% end %>
+</tbody>
 </table>
+</center>
 
 <p>
 <%= link_to 'New list', new_list_path %>
