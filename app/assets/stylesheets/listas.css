@@ -109,7 +109,7 @@ body {
   font-weight: normal;
   font-size: 35px;
   font-family:"helvetica neue";
-  width: 361px;
+  width: 400px;
   height: 42px;
   position: absolute;
   top: 29px;
@@ -155,7 +155,7 @@ body {
 #absolute-wrapper .row-fluid {
   width: 1050px;
   height: 501px;
-  position: absolute;
+  position: relative;
   top: 805px;
   left: 0px;
 }

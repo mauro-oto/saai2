@@ -1,50 +1,54 @@
+<head>
+<%= stylesheet_link_tag    "hangman", media: "all", "data-turbolinks-track" => true %>
+</head>
 
-<% if @turns_left > 0 %>
+<div class="divpadding">
+  <% if @turns_left > 0 %>
 
   <% if @word.length > @correct_letters and @palabra_adivinada == false %>
+  <h1 class:"titulo">Hangman</h1>
+  <img class="imghangman" src="/images/hangman_0<%= @turns_left %>.png" /><br />
+  <h3>Turnos: <%= @turns_left %></h3>
 
-    <img src="/images/hangman_0<%= @turns_left %>.png" /><br />
+  <%= form_tag hangman_game_path, :method => 'post', id: "hangmanform" do %>
+  Letra: <input type="text" name="letter" id="letter" maxlength="1" size="2" style="width: 40px" autocomplete="off" />
 
-    <h3>Turnos: <%= @turns_left %></h3>
-
-    <%= form_tag hangman_game_path, :method => 'post' do %>
-      Letra: <input type="text" name="letter" id="letter" maxlength="1" size="2" style="width: 40px" autocomplete="off" />
-      
-      <a href="#" id="adivinar">Adivinar palabra?</a>
-      <input type="text" name="palabra" id="palabra" style="display:none" autocomplete="off" />
-      <input type="submit" value="Enviar" />
-      <br />
-      <a href="/hangman">Nuevo juego</a>
-    <% end %>
+  <a href="#" id="adivinar">Adivinar palabra?</a>
+  <input type="text" name="palabra" id="palabra" style="display:none" autocomplete="off" />
+  <input type="submit" value="Enviar" />
+  <br />
+  <a href="/hangman">Nuevo juego</a>
+  <% end %>
 
   <% elsif @palabra_adivinada == true %>
-    <img src="/images/hangman_010.png" /><br />
-    <h3>Adivinaste la palabra! Se te acreditaron 25 puntos. </h3> <a href="/hangman">Volver a jugar</a>
+  <img class="imghangman" src="/images/hangman_010.png" /><br />
+  <h3>Adivinaste la palabra! Se te acreditaron 25 puntos. </h3> <a href="/hangman">Volver a jugar</a>
   <% else %>
-  <img src="/images/hangman_010.png" /><br />
-    <h3>Ganaste! Se te acreditaron 10 puntos. </h3> <a href="/hangman">Volver a jugar</a>
+  <img class="imghangman" src="/images/hangman_010.png" /><br />
+  <h3>Ganaste! Se te acreditaron 10 puntos. </h3> <a href="/hangman">Volver a jugar</a>
   <% end %>
 
-<% else %>
-  <img src="/images/hangman_00.png" /><br />
+  <% else %>
+  <img class="imghangman" src="/images/hangman_00.png" /><br />
   <h3>Perdiste!</h3> La palabra era "<%= UnicodeUtils.upcase(session[:current_word].join("")) %>". <a href="/hangman">Volver a jugar</a>
-<% end %>
+  <% end %>
 
-<h4>
-  Letras usadas:
-  <% if @used_letters.length > 0 %>
+  <h4>
+    Letras usadas:
+    <% if @used_letters.length > 0 %>
     <%= @used_letters.split("").join(", ") %>
-  <% else %>
+    <% else %>
     Ninguna
-  <% end %>
-</h4>
+    <% end %>
+  </h4>
 
-<div id="hangman">
-  <% if @palabra_adivinada == false %>
-  <% @word.each do |letter| %>
+  <div id="hangman">
+    <% if @palabra_adivinada == false %>
+    <% @word.each do |letter| %>
     <span class="letter"><%= letter %></span>
-  <% end %>
-  <% else %>
-  <span class ="letter">La palabra era: <%= @palabra %></span>
-  <% end %>
+    <% end %>
+    <% else %>
+    <span class ="letter">La palabra era: <%= @palabra %></span>
+    <% end %>
+  </div>
 </div>

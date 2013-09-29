@@ -12,12 +12,12 @@
  *= require_tree .
  */
 
-/*
-.sinbreak{
-  width: 2em;
-  float: left;
-  text-align: right
-  margin-right: 0.5em;
-  display: block
+div.divpadding{
+	padding-top: 6em;
+	padding-left: 5em;
+	height: 50em
 }
-*/
+
+h1.titulo{
+	font-family: "helvetica neue"
+}

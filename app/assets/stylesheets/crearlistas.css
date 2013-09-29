@@ -100,13 +100,13 @@ body {
   top: 25px;
   left: 110px;
 }
-#absolute-wrapper form {
+/*#absolute-wrapper form {
   width: 424px;
   height: 320px;
-  position: absolute;
+  position: relative;
   top: 231px;
   left: 63px;
-}
+}*/
 #absolute-wrapper form .control-label {
   font-weight: bold;
 }

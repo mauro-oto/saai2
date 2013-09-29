@@ -53,7 +53,7 @@ body {
   font-family:"oswald";
   font-weight: normal;
   font-size: 17pt;
-  width: 400px;
+  width: 450px;
   height: 42px;
   position: absolute;
   top: 17px;
@@ -166,7 +166,7 @@ body {
 #absolute-wrapper .row-fluid {
   width: 1050px;
   height: 501px;
-  position: absolute;
-  top: 805px;
+  position: relative;
+  top: 0px;
   left: 0px;
 }
