@@ -1,0 +1,59 @@
+<div class="divpadding ">
+<center>
+<div class="progress progress-striped" style="width:500px;">
+    <div id="progreso" class="bar" style="width:0%">
+    <center><span id="porcentaje"></span></center>
+    </div>
+</div>
+
+<div id="player"></div>
+</center>
+
+<script src="http://www.youtube.com/player_api"></script>
+
+<script>
+        
+    // create youtube player
+    var player;
+    function onYouTubePlayerAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: 'PWJ0qvYtWmo',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+    }
+    
+    var progressBar = $('#progreso'),
+    width = 0;
+
+    // autoplay video
+    function onPlayerReady(event) {
+        event.target.cueVideo();
+    }
+
+    function onPlayerStateChange(event) {        
+      if(event.data === 1) {            
+        progressBar.width(width);
+        var interval = setInterval(function() {
+        if (player.getPlayerState() === 1) {
+          var duration = player.getDuration();
+          var aumento = (100 / duration);
+          width += aumento;
+          $('#porcentaje').html(Math.round(width) + '%');
+          progressBar.css('width', width + '%');
+          if (width >= 100) {
+            clearInterval(interval);
+          }
+        }
+        else if (player.getPlayerState() === 2) {
+          clearInterval(interval);
+        }
+      }, 1000)}
+    }
+    
+</script>
+</div>

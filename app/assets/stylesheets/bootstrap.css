@@ -6165,3 +6165,9 @@ a.badge:focus {
 .affix {
   position: fixed;
 }
+
+#porcentaje {
+    color: #000;
+    text-align: center;
+    width: 100%;
+  }

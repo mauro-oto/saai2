@@ -1,26 +1,24 @@
 <div class="divpadding">
-<h1 class="titulo">Perfil</h1>
+<h1 class="titulo">Perfil: </h1>
 <p>
-  <strong>Nombre:</strong>
-  <%= @user.nombre %><%= @user.apellido %>
+
+<div class="span4 well">
+  <div class="row">
+    <div class="span1"><a href="#" class="thumbnail"><img src="http://critterapp.pagodabox.com/img/user.jpg" alt=""></a>
+    </div>
+    <div class="span3">
+      <p><strong><%= @user.nombre %> <%= @user.apellido %></strong></p>
+      <p><span class="badge badge-success"><%= @user.puntosPrivados %> puntos privados</span> <span class="badge badge-info"><%= @user.puntosPublicos %> puntos publicos</span> <span class="badge badge-warning">8 listas</span></p>
+      <p><strong>Idioma nativo:</strong> <span class="badge badge-warning"><%= @user.idiomasNativos %></span> <br />
+      <strong>Idioma a aprender:</strong> <span class="badge badge-info"><%= @user.idiomasAAprender %></span></p>
+    </div>
+  </div>
+</div>
 </p>
- 
-<p>
-  <strong>Idiomas Nativos:</strong>
-  <%= @user.idiomasNativos %>
-</p>
+</div>
 
 <p>
-  <strong>Idiomas a aprender:</strong>
-  <%= @user.idiomasAAprender %>
-</p>
-
-<p>
-  <strong>Foto:</strong>
-  <img src="<%= @user.foto %>"</ img>
-</p>
-
   <li>
   <%= link_to "Editar perfil", edit_user_registration_path %>
   </li>
-</div>
+</p>

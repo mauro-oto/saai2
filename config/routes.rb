@@ -12,6 +12,7 @@ Saai2::Application.routes.draw do
   get 'users/menu', to: 'users#menu'
   get 'ranking', to: 'users#ranking'
   get "actividades/", to: 'actividades#index'
+  get "actividades/video", to: 'actividades#video'
 
   # Devise
   root :to => "users#menu"
