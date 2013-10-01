@@ -31,7 +31,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # Devise
-gem 'devise'
+gem 'devise', '3.0.3'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -52,3 +52,8 @@ end
 
 gem 'bootstrap-editable-rails'
 gem 'unicode_utils'
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
