@@ -3,6 +3,8 @@
 </head>
 
 <div class="divpadding">
+  <%= link_to "<-- Regresar", "/", :class => "btn btn-mini" %>
+  <p>
   <% if @turns_left > 0 %>
 
   <% if @word.length > @correct_letters and @palabra_adivinada == false %>

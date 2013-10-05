@@ -1,22 +1,23 @@
-<h1>New List</h1>
+<div class="divpadding">
+<%= link_to "<-- Regresar", "/", :class => "btn btn-mini" %>
+<p>
+<h1>Lista Nueva:</h1>
 
 <%= form_for :list, url: lists_path do |f| %>
   <p>
-    <%= f.label :nombre %><br>
-    <%= f.text_field :nombre %>
+    <%= f.label :nombre, "Nombre: " %><%= f.text_field :nombre %>
   </p>
  
   <p>
-    <%= f.label :idiomaNativo %><br>
-    <%= f.text_area :idiomaNativo %>
+    <%= f.label :idiomaNativo, "Idioma Nativo: " %><%= f.text_field :idiomaNativo %>
   </p>
   
   <p>
-    <%= f.label :idiomaForaneo %><br>
-    <%= f.text_area :idiomaForaneo %>
+    <%= f.label :idiomaForaneo, "Idioma Foraneo: " %><%= f.text_field :idiomaForaneo %>
   </p>
  
   <p>
-    <%= f.submit %>
+    <%= f.submit "Crear Lista", :class => "btn btn-success" %>
   </p>
 <% end %>
+</div>

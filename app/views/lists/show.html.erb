@@ -1,13 +1,10 @@
+<div class="divpadding">
+<%= link_to "<-- Regresar", "/lists", :class => "btn btn-mini" %>
+<p></p>
 <p>
-  <h3>Nombre de lista:</h3><%= @list.nombre %>
-</p>
-
-<p>
-  <h3>Idioma Nativo:</h3><%= @list.idiomaNativo %>
-</p>
-
-<p>
-  <h3>Idioma Foraneo:</h3><%= @list.idiomaForaneo %>
+  <strong>Nombre de lista:</strong> <%= @list.nombre %><br />
+  <strong>Idioma Nativo:</strong> <%= @list.idiomaNativo %><br />
+  <strong>Idioma Foraneo:</strong> <%= @list.idiomaForaneo %><br />
 </p>
 
 <h2>Filas:</h2>
@@ -33,7 +30,7 @@
           <td><a href="#" class="editable1" id="audio<%= fila.id %>" data-type="text" data-resource="fila" data-name="audio" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.audio %></a></td>
           <td><a href="#" class="editable1" id="sinonimos<%= fila.id %>" data-type="text" data-resource="fila" data-name="sinonimos" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.sinonimos %></a></td>
           <td><a href="#" class="editable1" id="antonimos<%= fila.id %>" data-type="text" data-resource="fila" data-name="antonimos" data-pk="<%= fila.id %>" data-url="/lists/<%= fila.list.id %>/filas/<%= fila.id %>.json"><%= fila.antonimos %></a></td>
-	  <td><%= link_to 'Delete', [fila.list, fila], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	  <td><%= link_to raw('<i class="icon-trash icon-white"></i>'), [fila.list, fila], class: "btn btn-danger", method: :delete, data: { confirm: 'Pulsa OK para confirmar el borrado de fila' } %></td>
         </tr>
         <% end %>
       </tbody>
@@ -73,6 +70,8 @@
   </td>
   </tr>
   </table>
-  <%= f.submit %>
+  <%= f.submit "Crear fila", :class => "btn btn-success crearfila" %>
+  <br />
   </center>
 <% end %>
+</div>
