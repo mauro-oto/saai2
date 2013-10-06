@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Saai2</title>
+  <title>Sistema de Aprendizaje de Idiomas</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= stylesheet_link_tag    "bootstrap", media: "all", "data-turbolinks-track" => true %>
   <%= stylesheet_link_tag    "bootstrap-responsive", media: "all", "data-turbolinks-track" => true %>
@@ -20,7 +20,7 @@
 
 <% if user_signed_in? %>
   <li>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+  <%= link_to('Salir del Sistema', destroy_user_session_path, :method => :delete, :style => 'color: #000000') %>        
   </li>
 <% else %>
   <li>
@@ -34,7 +34,7 @@
       <h1 class="heading">Sistema de Auto Aprendizaje de Idiomas</h1>
     </div>
     <div class="rectangle rectangle-2 rectangle-4">
-      <img src="../images/black_invert_30x40.png" class="image">
+      <%= image_tag("black_invert_30x40.png", :class => "image") %>
     </div>
 
     <%= yield %>

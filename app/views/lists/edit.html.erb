@@ -1,5 +1,9 @@
-<h1>Editing list</h1>
- 
+<div class="divpadding">
+<%= link_to "<-- Regresar", "/lists", :class => "btn btn-mini" %>
+<p>
+<h1>Editar Lista</h1>
+</p>
+
 <%= form_for :list, url: list_path(@list.id), method: :patch do |f| %>
   <% if @list.errors.any? %>
   <div id="errorExplanation">
@@ -13,23 +17,22 @@
   </div>
   <% end %>
   <p>
-    <%= f.label :nombre %><br>
+    <%= f.label :nombre, "Nombre: " %>
     <%= f.text_field :nombre %>
   </p>
  
   <p>
-    <%= f.label :idiomaNativo %><br>
+    <%= f.label :idiomaNativo, "Idioma Nativo: " %>
     <%= f.text_area :idiomaNativo %>
   </p>
   
   <p>
-    <%= f.label :idiomaForaneo %><br>
+    <%= f.label :idiomaForaneo, "Idioma Foraneo: " %>
     <%= f.text_field :idiomaForaneo %>
   </p>
  
   <p>
-    <%= f.submit %>
+    <%= f.submit "Editar Lista", :class => "btn btn-success" %>
   </p>
 <% end %>
- 
-<%= link_to 'Back', lists_path %>
+</div>

@@ -97,15 +97,15 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
 .icon-th-large:before             { content: "\f009"; }
 .icon-th:before                   { content: "\f00a"; }
 .icon-th-list:before              { content: "\f00b"; }
-.icon-ok:before                   { content: "\f00c"; }
-.icon-remove:before               { content: "\f00d"; }
+
+
 .icon-zoom-in:before              { content: "\f00e"; }
 
 .icon-zoom-out:before             { content: "\f010"; }
 .icon-off:before                  { content: "\f011"; }
 .icon-signal:before               { content: "\f012"; }
 .icon-cog:before                  { content: "\f013"; }
-.icon-trash:before                { content: "\f014"; }
+
 .icon-home:before                 { content: "\f015"; }
 .icon-file:before                 { content: "\f016"; }
 .icon-time:before                 { content: "\f017"; }
