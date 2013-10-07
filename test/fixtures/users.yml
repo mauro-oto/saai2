@@ -12,7 +12,7 @@ one:
   idiomasNativos: Español
   idiomasAAprender: Inglés
   email: mauro.otonelli@gmail.com
-  password: 123123123
+  encrypted_password: <%= User.new.send(:password_digest, '123123123') %>
   puntosPublicos: 30
   puntosPrivados: 15
 
@@ -24,7 +24,7 @@ two:
   idiomasNativos: Español
   idiomasAAprender: Inglés
   email: wolli.becker@gmail.com
-  password: juanbecker
+  encrypted_password: <%= User.new.send(:password_digest, 'juanbecker') %>
   puntosPublicos: 50
   puntosPrivados: 25
 
@@ -36,7 +36,7 @@ three:
   idiomasNativos: Español
   idiomasAAprender: Inglés
   email: jose.rodriguez@hotmail.com
-  password: joserodriguez
+  encrypted_password: <%= User.new.send(:password_digest, 'joserodriguez') %>
   puntosPublicos: 5
   puntosPrivados: 20
 
@@ -48,7 +48,7 @@ four:
   idiomasNativos: Español
   idiomasAAprender: Inglés
   email: maria.zabaleta@msn.com
-  password: mariazabaleta
+  encrypted_password: <%= User.new.send(:password_digest, 'mariazabaleta') %>
   puntosPublicos: 60
   puntosPrivados: 20
 
@@ -60,6 +60,6 @@ five:
   idiomasNativos: Español
   idiomasAAprender: Inglés
   email: julieta.parri@yahoo.com
-  password: julietaparri
+  encrypted_password: <%= User.new.send(:password_digest, 'julietaparri') %>
   puntosPublicos: 35
   puntosPrivados: 75
