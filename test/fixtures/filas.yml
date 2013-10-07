@@ -7,7 +7,7 @@ one:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
-  list_id: one
+  list_id: 7
 
 two:
   palabra: Murcielago
@@ -16,7 +16,7 @@ two:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
-  list_id: one
+  list_id: 7
 
 three:
   palabra: Abeja
@@ -25,7 +25,7 @@ three:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
-  list_id: one
+  list_id: 7
 
 four:
   palabra: Pajaro
@@ -34,7 +34,7 @@ four:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
-  list_id: one
+  list_id: 7
 
 five:
   palabra: Mariposa
@@ -43,7 +43,7 @@ five:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
-  list_id: one
+  list_id: 7
 
 six:
   palabra: Camello
@@ -52,7 +52,7 @@ six:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
-  list_id: one
+  list_id: 7
 
 seven:
   palabra: Vaca
@@ -61,7 +61,7 @@ seven:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
-  list_id: one
+  list_id: 7
 
 eight:
   palabra: Cangrejo
@@ -70,7 +70,7 @@ eight:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
-  list_id: one
+  list_id: 7
 
 nine:
   palabra: Pato
@@ -79,7 +79,7 @@ nine:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
-  list_id: one
+  list_id: 7
 
 ten:
   palabra: Cabra
@@ -88,7 +88,7 @@ ten:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
-  list_id: one
+  list_id: 7
 
 eleven:
   palabra: Gorila
@@ -97,7 +97,7 @@ eleven:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
-  list_id: one
+  list_id: 7
 
 twelve:
   palabra: Cordero
@@ -106,4 +106,94 @@ twelve:
   audio: MyString
   sinonimos: MyString
   antonimos: MyString
-  list_id: one
+  list_id: 7
+
+thirteen:
+  palabra: Pera
+  significado: Pear
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+  list_id: 1
+
+fourteen:
+  palabra: Manzana
+  significado: Apple
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+  list_id: 1
+
+fifteen:
+  palabra: Tomate
+  significado: Tomato
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+  list_id: 1
+
+sixteen:
+  palabra: Pomelo
+  significado: Grapefruit
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+  list_id: 1
+
+seventeen:
+  palabra: Frambuesa
+  significado: Raspberry
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+  list_id: 1
+
+eighteen:
+  palabra: Martillo
+  significado: Hammer
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+  list_id: 2
+
+nineteen:
+  palabra: Destornillador
+  significado: Screwdriver
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+  list_id: 2
+
+twenty:
+  palabra: Pinza
+  significado: Plier
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+  list_id: 2
+
+twenty-one:
+  palabra: Tornillo
+  significado: Screw
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+  list_id: 2
+
+twenty-two:
+  palabra: Clavo
+  significado: Nail
+  imagen: MyString
+  audio: MyString
+  sinonimos: MyString
+  antonimos: MyString
+  list_id: 2
