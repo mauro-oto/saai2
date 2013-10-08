@@ -1,0 +1,28 @@
+<div class="divpadding">
+<%= link_to "<-- Regresar", "/actividades", :class => "btn btn-mini" %>
+<p>
+<h1>Lista de videos: </h1>
+<strong>Cada video completamente visto otorga 20 puntos publicos.</strong>
+<p>
+<%= form_tag actividades_videolist_path, :method => 'post' do %>
+<select name="cantidad" style="width:50px">
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+</select>
+<br />
+<input type="submit" value="Limitar cantidad listada" class="btn btn-warning" />
+<% end %>
+</p>
+
+<div id='outer'>
+<% @videos.each do |video| %>
+    <center>
+    <div class='tile'>
+    <%= link_to "#{image_tag(video.thumbnails.first.url)}".html_safe, actividades_video_path(:videoid => video.unique_id), :method => :post %> <br/> <%= video.title %> </div>
+    </center>
+<% end %>
+</div>
+
+</div>

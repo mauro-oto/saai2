@@ -1,4 +1,6 @@
-<div class="divpadding ">
+<div class="divpadding">
+<%= link_to "<-- Regresar", "/actividades/videos", :class => "btn btn-mini" %>
+<p>
 <center>
 <div class="progress progress-striped" style="width:500px;">
     <div id="progreso" class="bar" style="width:0%">
@@ -19,7 +21,7 @@
         player = new YT.Player('player', {
           height: '390',
           width: '640',
-          videoId: 'PWJ0qvYtWmo',
+          videoId: '<%= @videoid %>',
           events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange

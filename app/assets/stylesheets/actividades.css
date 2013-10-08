@@ -2,3 +2,5 @@ table.tablasaprender{
 	background: rgba(51, 204, 255, 12);
 	opacity: 0.9;
 }
+
+.tile { width: 500px; border: 1px solid black; height: 130px; margin: 8px; padding:5px; display:inline-block; }

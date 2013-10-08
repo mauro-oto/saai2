@@ -52,6 +52,7 @@ end
 
 gem 'bootstrap-editable-rails'
 gem 'unicode_utils'
+gem 'youtube_it'
 
 group :production do
   gem 'pg'
