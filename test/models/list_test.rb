@@ -6,10 +6,11 @@ class ListTest < ActiveSupport::TestCase
   	end
 
   	test "presencia de atributos" do
-    	@list = List.new().nombre = "x"
+    	@list = List.new()
+      @list.nombre = "x"
     	@list.idiomaForaneo = "x"
     	assert !@list.save(), "Se guardó una lista sin idiomaNativo"
-    	@list = List.new().idiomaForaneo = "x"
+    	@list = List.new()
     	@list.idiomaNativo = "x"
     	assert !@list.save(), "Se guardó una lista sin nombre"
     	@list = List.new().nombre = "x"
