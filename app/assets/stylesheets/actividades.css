@@ -4,3 +4,8 @@ table.tablasaprender{
 }
 
 .tile { width: 500px; border: 1px solid black; height: 130px; margin: 8px; padding:5px; display:inline-block; }
+
+.vinculo:link {color:#FF0000;}      /* unvisited link */
+.vinculo:visited {color:#00FF00;}  /* visited link */
+.vinculo:hover {color:blue; text-decoration: underline;}  /* mouse over link */
+.vinculo:active {color:#0000FF;}  /* selected link */ 

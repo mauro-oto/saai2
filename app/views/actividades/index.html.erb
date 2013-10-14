@@ -1,47 +1,27 @@
 <head>
-  <%= stylesheet_link_tag    "actividades", media: "all", "data-turbolinks-track" => true %>
+	<%= stylesheet_link_tag    "actividades", media: "all", "data-turbolinks-track" => true %>\
 </head>
 
-<script type="text/javascript">
-var loadPartial=function(name){
-	var xmlhttp;
-	if (window.XMLHttpRequest){
-		// code for IE7+, Firefox, Chrome, Opera, Safari
-		xmlhttp=new XMLHttpRequest();
-	}
-	else{
-		// code for IE6, IE5
-		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	xmlhttp.onreadystatechange=function()
-	{
-		if (xmlhttp.readyState==4 && xmlhttp.status==200)
-		{
-			document.getElementById("partial").innerHTML=xmlhttp.responseText;
-		}
-	}
-	xmlhttp.open("GET", name + ".html",true);
-	xmlhttp.send();
-}
-</script>
+<script type="text/javascript" src="../../assets/javascripts/actividades.js"></script>
 
-<div class="divpadding ">
-    <%= link_to "<-- Regresar", "/", :class => "btn btn-mini" %>
-    <p>
-	<h1 class="titulo">Actividades</h1>
-	<div>
-	<ol>
-		<li onclick="loadPartial('proper')">Pronombres personales</li>
-		<li onclick="loadPartial('propos')">Pronombres posesivos</li>
-		<li onclick="loadPartial('prodem')">Pronombres demostrativos</li>
-		<li onclick="loadPartial('proref')">Pronombres reflexivos</li>
-		<li onclick="loadPartial('tabpro')">Tabla de pronombres</li>
-		<li onclick="loadPartial('quiz')">Quiz</li>
-		<li><%= link_to "Ver videos", "actividades/videolist" %></li>
-		<!-- Basado en: http://www.curso-ingles.com/gramatica-inglesa/pronombres-personales.php -->
-	</ol>
-	</div>
-	<div id="partial">
-		<%= render "proper" %>
-	</div>
+<div class="divpadding">
+	<%= link_to "<-- Regresar", "/", :class => "btn btn-mini" %>
+	<p>
+		<h1 class="titulo">Actividades</h1>
+		<div>
+			<ol>
+				<li class="vinculo" onclick="loadPartial('proper')">Pronombres personales</li>
+				<li class="vinculo" onclick="loadPartial('propos')">Pronombres posesivos</li>
+				<li class="vinculo" onclick="loadPartial('prodem')">Pronombres demostrativos</li>
+				<li class="vinculo" onclick="loadPartial('tabpro')">Tabla de pronombres</li>
+				<li class="vinculo" onclick="loadPartial('quiz')">Quiz</li>
+				<li><%= link_to "Ver videos", "actividades/videolist" %></li>
+				<!-- Basado en: http://www.curso-ingles.com/gramatica-inglesa/pronombres-personales.php -->
+			</ol>
+		</div>
+		<div id="partials">
+			<%= render "proper" %>
+			<!-- poner el render de todos los demas también -->
+		</div>
+	</p>
 </div>

@@ -1,7 +1,3 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
-
 var loadPartial=function(name){
 	var xmlhttp;
 	if (window.XMLHttpRequest){
@@ -25,4 +21,21 @@ var loadPartial=function(name){
 
 var hello = function(){
 	confirm("Hello");
+};
+
+var hidePartials = function(){
+	document.getElementById("proper").style.visibility = "hidden";
+	// document.getElementById("prodem").style.visibility = "hidden";
+	// document.getElementById("propos").style.visibility = "hidden";
+	// document.getElementById("tabpro").style.visibility = "hidden";
+	// document.getElementById("quiz").style.visibility = "hidden";
+}
+
+window.onload=function(){
+	hidePartials();
+};
+
+var loadPartials = function(pagina){
+	hidePartials();
+	document.getElementById(pagina).style.visibility = "visible";
 };
