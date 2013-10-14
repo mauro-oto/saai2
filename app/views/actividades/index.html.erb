@@ -20,7 +20,7 @@ var loadPartial=function(name){
 			document.getElementById("partial").innerHTML=xmlhttp.responseText;
 		}
 	}
-	xmlhttp.open("GET", name + ".html.erb",true);
+	xmlhttp.open("GET", name + ".html",true);
 	xmlhttp.send();
 }
 </script>
@@ -31,12 +31,12 @@ var loadPartial=function(name){
 	<h1 class="titulo">Actividades</h1>
 	<div>
 	<ol>
-		<li onclick="loadPartial('_proper')">Pronombres personales</li>
-		<li onclick="loadPartial('_propos')">Pronombres posesivos</li>
-		<li onclick="loadPartial('_prodem')">Pronombres demostrativos</li>
-		<li onclick="loadPartial('_proref')">Pronombres reflexivos</li>
-		<li onclick="loadPartial('_tabpro')">Tabla de pronombres</li>
-		<li onclick="loadPartial('_quiz')">Quiz</li>
+		<li onclick="loadPartial('proper')">Pronombres personales</li>
+		<li onclick="loadPartial('propos')">Pronombres posesivos</li>
+		<li onclick="loadPartial('prodem')">Pronombres demostrativos</li>
+		<li onclick="loadPartial('proref')">Pronombres reflexivos</li>
+		<li onclick="loadPartial('tabpro')">Tabla de pronombres</li>
+		<li onclick="loadPartial('quiz')">Quiz</li>
 		<li><%= link_to "Ver videos", "actividades/videolist" %></li>
 		<!-- Basado en: http://www.curso-ingles.com/gramatica-inglesa/pronombres-personales.php -->
 	</ol>

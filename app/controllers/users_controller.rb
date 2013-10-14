@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @count = List.where(user_id: 1).count
   end
 
   def menu
