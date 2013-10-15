@@ -35,4 +35,9 @@ $(document).ready(function() {
   	$('#palabra').focus();
   });
 
+  $('#pronomper').click(function() {
+    $('#prodem').fadeToggle();
+  });
+  
+
 });
