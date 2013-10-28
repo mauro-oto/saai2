@@ -1,0 +1,19 @@
+<h1>Tutti Frutti</h1>
+
+<div class="divpadding">
+	<%= link_to "<-- Regresar", "/", :class => "btn btn-mini" %>
+<table>
+	<th>
+		<% for i in 0..@lists.length %>
+		<td><%= @lists[i].nombre %></td>
+		<% end %>
+	</th>
+	<tbody>
+		<tr>
+			<% for i in 0..@lists.length %>
+			<td></td>
+			<% end %>
+		</tr>
+	</tbody>
+</table>
+</div>
