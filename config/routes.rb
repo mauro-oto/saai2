@@ -15,8 +15,8 @@ Saai2::Application.routes.draw do
   post "actividades/video", to: 'actividades#video'
   get "actividades/videolist", to: 'actividades#videolist'
   post "actividades/videolist", to: 'actividades#videolist'
-  get "tuttifrutti/index"
-  
+  get "tuttifrutti", to: 'tuttifrutti#index'
+  post "tuttifrutti/agregarPuntos", to: 'tuttifrutti#agregarPuntos'
   # Devise
   root :to => "users#menu"
   
