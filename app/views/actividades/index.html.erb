@@ -1,5 +1,6 @@
 <head>
-	<%= stylesheet_link_tag    "actividades", media: "all", "data-turbolinks-track" => true %>\
+	<%= stylesheet_link_tag    "actividades", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "actividades", "data-turbolinks-track" => true %>
 </head>
 
 <div class="divpadding">
@@ -8,60 +9,20 @@
 		<h1 class="titulo">Actividades</h1>
 		<div>
 			<ol>
-				<a href="#"><li id="pronomper">Pronombres personales</li></a>
-				<a href="#"><li id="pronompos">Pronombres posesivos</li></a>
-				<a href="#"><li id="pronomdem">Pronombres demostrativos</li></a>
-				<a href="#"><li id="tabpronom">Tabla de pronombres</li></a>
-				<a href="#"><li id="quiz">Quiz</li></a>
+				<a class="vinculo" id="properli"/><li>Pronombres personales</li></a>
+				<a class="vinculo" id="proposli"><li>Pronombres posesivos</li></a>
+				<a class="vinculo" id="prodemli"><li>Pronombres demostrativos</li></a>
+				<a class="vinculo" id="tabproli"><li>Tabla de pronombres</li></a>
 				<li><%= link_to "Ver videos", "actividades/videolist" %></li>
 				<!-- Basado en: http://www.curso-ingles.com/gramatica-inglesa/pronombres-personales.php -->
 			</ol>
 		</div>
 		<div id="partials">
-		<div id="prodem" class="hiddendiv" style="display:none;">
-	<h3>Pronombres demostrativos</h3>
-	<p>Es importante comenzar señalando que los pronombres pueden estar en singular o plural y que pueden hacer referencia a la distancia.</p>
-	<div><span>this</span><strong>This</strong> <span>(Este/a/o)</span>,<span>That</span><strong>that</strong> <span>(Ese/a/o, aquél, aquello/a)</span>, <span>These</span><strong>these</strong> <span>(Estos/as)</span>, <span>Those</span><strong>those</strong> <span>(Esos/as, aquellos/as)</span></div>
-	<ul class="tablasaprender">
-		<li>Ejemplos:</li>
-		<li>Singular and here (singular y aquí):</li>
-		<li><span>I like this car.</span>I like <span>this</span> car. <span>(Me gusta este coche.)</span></li>
-		<li >Singular and there (singular y allí):</li>
-		<li><span>I like that car.</span>I like <span>that</span> car. <span>(Me gusta ese coche.)</span></li>
-		<li>Plural and here (plural y aquí):</li>
-		<li><span>I like these cars.</span>I like <span>these</span> cars. <span>(Me gustan estos coches.)</span></li>
-		<li>Plural and there (plural y allí):</li>
-		<li><span>I like those cars.</span>I like<span> those</span> cars.<span> (Me gustan aquellos coches.) </span></li>
-	</ul>
-	<h3>Other Uses of Demonstrative Pronouns (Otros usos de los demostrativos)</h3>
-	<ol class="tablasaprender">
-		<ol>
-			<li>Podemos utilizarlos cuando nos presentamos a otra persona al otro lado de la línea telefónica:
-				<ul>
-					<li><span>Hello. This is Alicia.</span>Hello. <span>This</span> is Alicia.<span> (Hola. Soy Alicia.) </span></li>
-				</ul>
-			</li>
-			<li>O cuando no estamos seguros de con quién estamos hablando al otro lado de la línea o a alguien que no vemos porque estamos en un sitio oscuro o en otra habitación:
-				<ul>
-					<li><span>Peter, is that you?</span>Peter, is <span>that</span> you? <span>(¿Eres tú, Peter?) </span></li>
-				</ul>
-			</li>
-			<li>"<strong>This</strong>", también lo podemos utilizar cuando presentamos a personas:
-				<ul>
-					<li><span>Lucy, this is my friend Jill.</span>Lucy, <span>this</span> is my friend Jill. <span>(Lucy, ésta es mi amiga Jill.) </span></li>
-				</ul>
-			</li>
-			<li>"<strong>That</strong>", también lo podemos utilizar para referirnos a algo del pasado:
-				<ul>
-					<li><span>That pizza was delicious.</span><span>That</span> pizza was delicious. <span>(Aquella pizza estaba riquísima.) </span></li>
-				</ul>
-			</li>
-		</ol>
-	</ol>
-</div>
-
-
-			<!-- poner el render de todos los demas también -->
+			<%= render "prodem" %>
+			<%= render "proper" %>
+			<%= render "propos" %>
+			<%= render "proref" %>
+			<%= render "tabpro" %>
 		</div>
 	</p>
 </div>
