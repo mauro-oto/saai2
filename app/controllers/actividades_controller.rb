@@ -8,6 +8,9 @@ class ActividadesController < ApplicationController
   	@videoid = params[:videoid]
   end
 
+  def seleccion
+  end
+
   def videolist
   	client = YouTubeIt::Client.new
   	if !(params[:cantidad])

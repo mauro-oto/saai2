@@ -1,0 +1,26 @@
+        <div class="divpadding">
+        <%= link_to "<-- Regresar", "/", :class => "btn btn-mini" %>
+        <div class="dom-body-text paragraph" style="margin-left:-2%">
+          <p>Juegos</p>
+        </div>
+        <div class="rectangle rectangle-1 rectangle-5">
+          <h3 class="heading" style="margin-left:5%">Elija un juego: </h3>
+          <div class="btn-group" style="margin-left:20%">
+            <a href="/hangman"><button class="btn btn-danger">Hangman</button></a>
+            <a href="/tuttifrutti"><button class="btn btn-primary">Tuttifrutti</button></a>
+          </div>
+        </div>
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th class="th-1">Puntos Publicos</th>
+              <th>Puntos Privados</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= current_user.puntosPublicos %></td>
+              <td><%= current_user.puntosPrivados %></td>
+            </tr>
+          </tbody>
+        </table>
